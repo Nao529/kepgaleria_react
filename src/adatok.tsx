@@ -18,7 +18,7 @@ export const KEPLISTA:KepTipus[]= [
     {
         id: 3,
         kep:"/kepek/pizza_cat.jpg",
-        leiras:"Cat in the galaxy on the pizza",
+        leiras:"Cat in the galaxy on a pizza",
     },
     {
         id: 4,
