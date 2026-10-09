@@ -14,5 +14,4 @@ function KisKep({kepem, index, kepkivalaszt}:KisKepProps){
         </>
     )
 }
-
 export default KisKep;

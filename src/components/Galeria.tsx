@@ -1,21 +1,21 @@
-import type { KepTipus } from "../adatok";
 import KisKep from "./KisKep";
 import "./Galeria.css";
+import { useKepContext } from "../contexts/KepgaleriaContext";
 
-interface GaleriaProps {
-  lista: KepTipus[];
-  kepkivalaszt: (index: number) => void;
-}
-function Galeria({ lista, kepkivalaszt }: GaleriaProps) {
+function Galeria() {
+  const { lista, setI } = useKepContext()
+
   return (
     <div className="galeria">
-      {
-        lista.map((e,i)=>{
-                return <KisKep kepem={e} index={i} kepkivalaszt={kepkivalaszt} key={e.id}/>
-            })
-      }
+      {lista.map((e,i)=>{
+        return <KisKep
+        kepem={e}
+        index={i}
+        kepkivalaszt={setI}
+        key={e.id}
+        />
+            })}
     </div>
   );
 }
-
 export default Galeria;

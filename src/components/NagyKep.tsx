@@ -1,11 +1,9 @@
-import type { KepTipus } from "../adatok";
+import { useKepContext } from "../contexts/KepgaleriaContext";
 
-interface NagyKepProps {
-  kepem: KepTipus;
-  elozoKep: () => void;
-  kovetkezoKep: () => void;
-}
-function NagyKep({ kepem, elozoKep, kovetkezoKep }: NagyKepProps) {
+function NagyKep() {
+  const { lista, i, elozoKep, kovetkezoKep } = useKepContext()
+  const kepem = lista[i]
+
   return (
     <div className="nagy-kep-sor">
     <button className="nyil" onClick={elozoKep}>&#10094;</button>
